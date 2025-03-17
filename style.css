@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  width: 300px;
+}
+
+.output-container {
+  width: 297mm;
+  height: 210mm;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#outputText {
+  font-size: 24px;
+  text-align: center;
+}
