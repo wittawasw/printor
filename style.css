@@ -26,11 +26,11 @@ body {
 }
 
 .letterTemplate #letterText {
-  font-size: 20px;
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
 .letterTemplate #outputText {
-  font-size: 36px;
+  font-size: 72px;
   text-align: center;
 }
