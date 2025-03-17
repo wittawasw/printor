@@ -7,13 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="output-container">
+  <div id="outputContainer">
+    <div id="letterText"></div>
     <div id="outputText"></div>
   </div>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const text = params.get('inputText') || '';
+    const letterName = params.get('letterName') || '';
+    const template = params.get('template') || '';
+
+    const container = document.getElementById('outputContainer');
+    container.classList.add(template);
+
+    if (template === 'letterTemplate') {
+      document.getElementById('letterText').innerText = letterName;
+    }
+
     document.getElementById('outputText').innerText = text;
   </script>
 </body>

@@ -11,16 +11,27 @@ body {
   width: 300px;
 }
 
-.output-container {
+.a4landscape, .letterTemplate {
   width: 297mm;
   height: 210mm;
-  border: 1px solid #000;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#outputText {
-  font-size: 24px;
+.a4landscape #outputText {
+  font-size: 48px;
+  text-align: center;
+}
+
+.letterTemplate #letterText {
+  font-size: 20px;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.letterTemplate #outputText {
+  font-size: 36px;
   text-align: center;
 }
