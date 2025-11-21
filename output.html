@@ -10,6 +10,9 @@
   <div id="outputContainer">
     <div id="letterText"></div>
     <div id="outputText"></div>
+
+    <div id="sender" class="senderBlock"></div>
+    <div id="receiver" class="receiverBlock"></div>
   </div>
 
   <script>
@@ -23,9 +26,16 @@
 
     if (template === 'letterTemplate') {
       document.getElementById('letterText').innerText = letterName;
+      document.getElementById('outputText').innerText = text;
     }
 
-    document.getElementById('outputText').innerText = text;
+    if (template === 'letterCover') {
+      const sender = ['s1','s2','s3','s4'].map(k => params.get(k) || '').join('\n');
+      const receiver = ['r1','r2','r3','r4'].map(k => params.get(k) || '').join('\n');
+
+      document.getElementById('sender').innerText = sender;
+      document.getElementById('receiver').innerText = receiver;
+    }
   </script>
 </body>
 </html>
